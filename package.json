@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "NODE_OPTIONS=--inspect && next build",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "server_local": "cp -r public .next/standalone/ && cp -r .next/static .next/standalone/.next/ && PORT=3000 HOSTNAME=0.0.0.0 node .next/standalone/server.js"

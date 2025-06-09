@@ -1,6 +1,6 @@
 'use server';
 
-import { fetchMockTest } from '@/modules/api';
+import { fetchMockTest, resetMockTest } from '@/modules/api';
 import Test1 from './_test1';
 
 export default async function Page() {

@@ -1,6 +1,6 @@
 'use client';
 
-import { fetchAddTodo, Todo } from '@/modules/api';
+import { fetchAddTodo, resetMockTest, Todo } from '@/modules/api';
 import { Inter } from 'next/font/google';
 import React, { useState } from 'react';
 const inter = Inter({ subsets: ['latin'] });
@@ -19,6 +19,13 @@ export default function Test1(props: { mockPromises: Todo[] }) {
   return (
     <div className={inter.className}>
       <h1>Todo List</h1>
+      <button
+        onClick={() => {
+          resetMockTest();
+        }}
+      >
+        Reset vars inside server
+      </button>
       <TodoForm addTodo={addTodo} />
       <div className='todo-list'>
         {props.mockPromises.map((todo) => (

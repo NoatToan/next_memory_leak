@@ -11,6 +11,14 @@ export interface Todo {
   text: string;
 }
 
+export async function resetMockTest() {
+  rawData = [];
+  revalidatePath('/', 'layout');
+
+  return {
+    message: 'Data fetched successfully',
+  };
+}
 export async function fetchMockTest() {
   // Return mock data
   return {
